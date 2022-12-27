@@ -9,7 +9,7 @@ public class ConnectionManager {
 	public static Connection initConnection() {
 		String host = "localhost";
 		String port = "3306";
-		String dbName = "webapp_practice";
+		String dbName = "supermarket";
 		String userName = "root";
 		String password = "289137tx";
 
