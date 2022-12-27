@@ -5,7 +5,7 @@ public class Employee {
 	/* ------------------------------ Constructores ----------------------------- */
 
 	public Employee(
-		int id,
+		int ID,
 		String firstName,
 		String lastName,
 		String telephone,
@@ -15,7 +15,7 @@ public class Employee {
 		String endDate,
 		boolean isActive
 	) {
-		this.id = id;
+		this.ID = ID;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.telephone = telephone;
@@ -48,7 +48,7 @@ public class Employee {
 
 	/* -------------------------------- Atributos ------------------------------- */
 
-	private int id;
+	private int ID;
 	private String firstName;
 	private String lastName;
 	private String telephone;
@@ -60,8 +60,8 @@ public class Employee {
 
 	/* --------------------------------- Métodos -------------------------------- */
 
-	public void setId(int id) {
-		this.id = id;
+	public void setId(int ID) {
+		this.ID = ID;
 	}
 
 	public void setFirstName(String firstName) {
@@ -96,8 +96,8 @@ public class Employee {
 		this.isActive = isActive;
 	}
 
-	public int getId() {
-		return id;
+	public int getID() {
+		return ID;
 	}
 
 	public String getFirstName() {
@@ -134,8 +134,8 @@ public class Employee {
 
 	public String toString() {
 		return (
-			"Employee [id=" +
-			id +
+			"Employee [ID=" +
+			ID +
 			", firstName=" +
 			firstName +
 			", lastName=" +
