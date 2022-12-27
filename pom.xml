@@ -15,7 +15,7 @@
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 	</properties>
   <build>
-  <finalName>webapp</finalName>
+  <finalName>supermarket</finalName>
     <plugins>
       <plugin>
 			<groupId>com.hubspot.maven.plugins</groupId>
