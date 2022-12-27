@@ -4,8 +4,8 @@ public class Product {
 
 	/* ------------------------------ Constructores ----------------------------- */
 
-	public Product(int id, String name, String brand, float price, int stock, String entryDate, String expireDate) {
-		this.id = id;
+	public Product(int ID, String name, String brand, float price, int stock, String entryDate, String expireDate) {
+		this.ID = ID;
 		this.name = name;
 		this.brand = brand;
 		this.price = price;
@@ -25,7 +25,7 @@ public class Product {
 
 	/* -------------------------------- Atributos ------------------------------- */
 
-	private int id;
+	private int ID;
 	private String name;
 	private String brand;
 	private float price;
@@ -35,8 +35,8 @@ public class Product {
 
 	/* --------------------------------- Métodos -------------------------------- */
 
-	public void setId(int id) {
-		this.id = id;
+	public void setId(int ID) {
+		this.ID = ID;
 	}
 
 	public void setName(String name) {
@@ -63,8 +63,8 @@ public class Product {
 		this.expireDate = expireDate;
 	}
 
-	public int getId() {
-		return id;
+	public int getID() {
+		return ID;
 	}
 
 	public String getName() {
@@ -93,8 +93,8 @@ public class Product {
 
 	public String toString() {
 		return (
-			"Product [id=" +
-			id +
+			"Product [ID=" +
+			ID +
 			", name=" +
 			name +
 			", brand=" +
