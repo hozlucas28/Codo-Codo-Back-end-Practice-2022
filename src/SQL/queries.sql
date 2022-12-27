@@ -1,7 +1,7 @@
 /* ------------------------------ Base De Datos ----------------------------- */
 
-CREATE DATABASE webapp_practice CHARACTER SET latin1 COLLATE latin1_spanish_ci;
-USE webapp_practice;
+CREATE DATABASE supermarket CHARACTER SET latin1 COLLATE latin1_spanish_ci;
+USE supermarket;
 
 
 /* --------------------------------- Tablas --------------------------------- */
@@ -32,12 +32,12 @@ CREATE TABLE Products (
 /* -------------------------------- Registros ------------------------------- */
 
 INSERT INTO Employees(firstName, lastName, telephone, workstation, salary, startDate, endDate, isActive)
-	VALUES ('Marcos', 'Gonzalez', '1122436123', 'Reponedor', 52000, '2021-08-21', '2022-02-26', 0);
+	VALUES ('Marcos', 'Gonzalez', '1122436123', 'Reponedor/a', 52000, '2021-08-21', '2022-02-26', 0);
 
 INSERT INTO Employees(firstName, lastName, telephone, workstation, salary, startDate, isActive)
 	VALUES
-		('Lucas', 'Hoz', '1133476826', 'Gerente', 120000, '2018-03-17', 1),
-		('Juana', 'Hernandez', '1124356122', 'Cajera', 64000, '2022-03-14', 1);
+		('Lucas', 'Hoz', '1133476826', 'Gerente/a', 120000, '2018-03-17', 1),
+		('Juana', 'Hernandez', '1124356122', 'Cajero/a', 64000, '2022-03-14', 1);
 
 INSERT INTO Products(name, brand, price, stock, entryDate, expireDate)
 	VALUES 
