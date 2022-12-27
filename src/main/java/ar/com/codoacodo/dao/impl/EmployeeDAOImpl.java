@@ -30,19 +30,35 @@ public class EmployeeDAOImpl implements IEmployeeDAO {
 		statement.execute();
 	}
 
-	public void delete(int id) throws SQLException {
+	public boolean delete(int ID) throws SQLException {
 		var connection = ConnectionManager.initConnection();
 		Statement statement = connection.createStatement();
 
-		String query = "DELETE FROM Employees WHERE id = " + id;
-		statement.executeUpdate(query);
+		String query = "SELECT * FROM Employees WHERE ID = " + ID + ";";
+		ResultSet resultSet = statement.executeQuery(query);
+
+		if (resultSet.next()) {
+			query = "DELETE FROM Employees WHERE ID = " + ID + ";";
+			statement.executeUpdate(query);
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public void deleteAll() throws SQLException {
+		var connection = ConnectionManager.initConnection();
+		Statement statement = connection.createStatement();
+
+		String query = "TRUNCATE TABLE Employees;";
+		statement.execute(query);
 	}
 
 	public void update(Employee employee) throws SQLException {
 		var connection = ConnectionManager.initConnection();
 
 		String query =
-			"UPDATE Employees SET firstName = ?, lastName = ?, telephone = ?, workstation = ?, salary = ?, startDate = ?, endDate = ?, isActive = ?  WHERE id = ?";
+			"UPDATE Employees SET firstName = ?, lastName = ?, telephone = ?, workstation = ?, salary = ?, startDate = ?, endDate = ?, isActive = ?  WHERE ID = ?;";
 		PreparedStatement statement = connection.prepareStatement(query);
 
 		statement.setString(1, employee.getFirstName());
@@ -53,38 +69,19 @@ public class EmployeeDAOImpl implements IEmployeeDAO {
 		statement.setString(6, employee.getStartDate());
 		statement.setString(7, employee.getEndDate());
 		statement.setBoolean(8, employee.isActive());
+		statement.setInt(9, employee.getID());
 		statement.execute();
 	}
 
-	public Employee getByID(int id) throws SQLException {
+	public Employee getByID(int ID) throws SQLException {
 		var connection = ConnectionManager.initConnection();
 		Statement statement = connection.createStatement();
 
-		String query = "SELECT * FROM Employees WHERE id = " + id;
+		String query = "SELECT * FROM Employees WHERE ID = " + ID + ";";
 		ResultSet resultSet = statement.executeQuery(query);
 
-		String firstName = resultSet.getString("firstName");
-		String lastName = resultSet.getString("lastName");
-		String telephone = resultSet.getString("telephone");
-		String workstation = resultSet.getString("workstation");
-		float salary = resultSet.getFloat("salary");
-		String startDate = resultSet.getString("startDate");
-		String endDate = resultSet.getString("endDate");
-		boolean isActive = resultSet.getBoolean("isActive");
-
-		return new Employee(firstName, lastName, telephone, workstation, salary, startDate, endDate, isActive);
-	}
-
-	public List<Employee> getAll() throws SQLException {
-		var connection = ConnectionManager.initConnection();
-		Statement statement = connection.createStatement();
-
-		String query = "SELECT * FROM Employees";
-		ResultSet resultSet = statement.executeQuery(query);
-
-		List<Employee> employees = new ArrayList<>();
-		while (resultSet.next()) {
-			int id = resultSet.getInt("id");
+		Employee employee = null;
+		if (resultSet.next()) {
 			String firstName = resultSet.getString("firstName");
 			String lastName = resultSet.getString("lastName");
 			String telephone = resultSet.getString("telephone");
@@ -94,7 +91,56 @@ public class EmployeeDAOImpl implements IEmployeeDAO {
 			String endDate = resultSet.getString("endDate");
 			boolean isActive = resultSet.getBoolean("isActive");
 
-			var employee = new Employee(id, firstName, lastName, telephone, workstation, salary, startDate, endDate, isActive);
+			employee = new Employee(ID, firstName, lastName, telephone, workstation, salary, startDate, endDate, isActive);
+		}
+		return employee;
+	}
+
+	public List<Employee> getAllByLastName(String lastNameToSearch) throws SQLException {
+		var connection = ConnectionManager.initConnection();
+		Statement statement = connection.createStatement();
+
+		String query = "SELECT * FROM Employees WHERE lastName = '" + lastNameToSearch + "';";
+		ResultSet resultSet = statement.executeQuery(query);
+
+		List<Employee> employees = new ArrayList<>();
+		while (resultSet.next()) {
+			int ID = resultSet.getInt("ID");
+			String firstName = resultSet.getString("firstName");
+			String lastName = resultSet.getString("lastName");
+			String telephone = resultSet.getString("telephone");
+			String workstation = resultSet.getString("workstation");
+			float salary = resultSet.getFloat("salary");
+			String startDate = resultSet.getString("startDate");
+			String endDate = resultSet.getString("endDate");
+			boolean isActive = resultSet.getBoolean("isActive");
+
+			var employee = new Employee(ID, firstName, lastName, telephone, workstation, salary, startDate, endDate, isActive);
+			employees.add(employee);
+		}
+		return employees;
+	}
+
+	public List<Employee> getAll() throws SQLException {
+		var connection = ConnectionManager.initConnection();
+		Statement statement = connection.createStatement();
+
+		String query = "SELECT * FROM Employees;";
+		ResultSet resultSet = statement.executeQuery(query);
+
+		List<Employee> employees = new ArrayList<>();
+		while (resultSet.next()) {
+			int ID = resultSet.getInt("ID");
+			String firstName = resultSet.getString("firstName");
+			String lastName = resultSet.getString("lastName");
+			String telephone = resultSet.getString("telephone");
+			String workstation = resultSet.getString("workstation");
+			float salary = resultSet.getFloat("salary");
+			String startDate = resultSet.getString("startDate");
+			String endDate = resultSet.getString("endDate");
+			boolean isActive = resultSet.getBoolean("isActive");
+
+			var employee = new Employee(ID, firstName, lastName, telephone, workstation, salary, startDate, endDate, isActive);
 			employees.add(employee);
 		}
 		return employees;
