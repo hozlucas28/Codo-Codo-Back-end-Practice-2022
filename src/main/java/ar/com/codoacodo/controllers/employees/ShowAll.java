@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
-@WebServlet("/employees/all") // Ruta de acceso --> http://localhost:8080/webapp/employees/all
+@WebServlet("/employees/all") // Ruta de acceso --> http://localhost:8080/supermarket/employees/all
 public class ShowAll extends HttpServlet {
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -23,11 +23,14 @@ public class ShowAll extends HttpServlet {
 		try {
 			employees = employeeDAOImpl.getAll();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 		req.setAttribute("employees", employees);
-		getServletContext().getRequestDispatcher("/Employees/showAll.jsp").forward(req, resp);
+		getServletContext().getRequestDispatcher("/employees/showAll.jsp").forward(req, resp);
+	}
+
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		doGet(req, resp);
 	}
 }
