@@ -32,15 +32,43 @@ public class Delete extends HttpServlet {
 		List<Employee> employees = new ArrayList<>();
 
 		try {
-			int ID = Integer.parseInt(req.getParameter("ID"));
+			String str_ID = req.getParameter("ID");
 
-			var employeeDAOImpl = new EmployeeDAOImpl();
-			boolean deleted = employeeDAOImpl.delete(ID);
+			if (!str_ID.equalsIgnoreCase("")) {
+				int ID = Integer.parseInt(str_ID);
 
-			if (deleted) {
-				employees = employeeDAOImpl.getAll();
-				isEmpty = employees.isEmpty();
-				path = "/employees/all";
+				var employeeDAOImpl = new EmployeeDAOImpl();
+				boolean deleted = employeeDAOImpl.delete(ID);
+
+				if (deleted) {
+					employees = employeeDAOImpl.getAll();
+					isEmpty = employees.isEmpty();
+
+					if (!isEmpty) {
+						req.setAttribute("showToast", "true");
+						req.setAttribute("toastColor", "bg-danger");
+						req.setAttribute("toastHeader", "Notificación");
+						req.setAttribute("toastMessage", "Se ha eliminado el empleado con éxito.");
+						path = "/employees/all";
+					} else {
+						req.setAttribute("showToast", "true");
+						req.setAttribute("toastColor", "text-danger");
+						req.setAttribute("toastHeader", "Notificación");
+						req.setAttribute(
+							"toastMessage",
+							"Se ha eliminado el empleado con éxito. Al no haber más empleados has sido redirigido a la página de inicio."
+						);
+						req.setAttribute("toastCustomIcon", "info");
+						path = "/index.jsp";
+					}
+				} else {
+					req.setAttribute("showToast", "true");
+					req.setAttribute("toastColor", "text-warning");
+					req.setAttribute("toastHeader", "¡Error!");
+					req.setAttribute("toastMessage", "El ID ingresado no existe, ingrese uno válido.");
+					req.setAttribute("toastCustomIcon", "danger");
+					path = "/employees/delete.jsp";
+				}
 			} else {
 				req.setAttribute("showToast", "true");
 				req.setAttribute("toastColor", "text-warning");
@@ -54,23 +82,7 @@ public class Delete extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			if (!isEmpty) {
-				req.setAttribute("showToast", "true");
-				req.setAttribute("toastColor", "bg-danger");
-				req.setAttribute("toastHeader", "Notificación");
-				req.setAttribute("toastMessage", "Se ha eliminado el empleado con éxito.");
-				getServletContext().getRequestDispatcher(path).forward(req, resp);
-			} else {
-				req.setAttribute("showToast", "true");
-				req.setAttribute("toastColor", "text-danger");
-				req.setAttribute("toastHeader", "Notificación");
-				req.setAttribute(
-					"toastMessage",
-					"Se ha eliminado el empleado con éxito. Al no haber más empleados has sido redirigido a la página de inicio."
-				);
-				req.setAttribute("toastCustomIcon", "info");
-				getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
-			}
+			getServletContext().getRequestDispatcher(path).forward(req, resp);
 		}
 	}
 }
