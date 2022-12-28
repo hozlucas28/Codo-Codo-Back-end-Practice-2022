@@ -13,24 +13,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
-@WebServlet("/products/all") // Ruta de acceso --> http://localhost:8080/supermarket/products/all
-public class ShowAll extends HttpServlet {
+@WebServlet("/products/searchByBrand") // Ruta de acceso --> http://localhost:8080/supermarket/products/searchByBrand
+public class SearchByBrand extends HttpServlet {
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		var productDAOImpl = new ProductDAOImpl();
 		List<Product> products = new ArrayList<>();
 
+		String brand = req.getParameter("brand");
+
 		try {
-			products = productDAOImpl.getAll();
+			products = (!brand.equalsIgnoreCase("")) ? productDAOImpl.getAllByBrand(brand) : productDAOImpl.getAll();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 
+		req.setAttribute("searchValue", brand);
 		req.setAttribute("products", products);
 		getServletContext().getRequestDispatcher("/products/showAll.jsp").forward(req, resp);
-	}
-
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		doGet(req, resp);
 	}
 }
