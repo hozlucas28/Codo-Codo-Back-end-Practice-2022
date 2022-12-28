@@ -45,9 +45,7 @@ public class UpdateData extends HttpServlet {
 		String entryDate = req.getParameter("entryDate");
 
 		String expireDate = req.getParameter("expireDate");
-		if (expireDate.equalsIgnoreCase("")) {
-			expireDate = null;
-		}
+		expireDate = (expireDate.equalsIgnoreCase("")) ? null : expireDate;
 
 		try {
 			var productDAOImpl = new ProductDAOImpl();
