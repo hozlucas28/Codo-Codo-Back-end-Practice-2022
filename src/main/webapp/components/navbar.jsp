@@ -9,14 +9,17 @@
 
 <%
 	String activeOption = request.getParameter("activeOption");
-	String showSearchButton = (String)request.getParameter("showSearchButton");
+	String showSearchButton = request.getParameter("showSearchButton");
+	String searchAction = request.getParameter("searchAction");
 	String searchValue = request.getParameter("searchValue");
+	String searchName = request.getParameter("searchName");
+	String searchPlaceholder = request.getParameter("searchPlaceholder");
 
 	activeOption = (activeOption == null) ? "null" : activeOption;
 	showSearchButton = (showSearchButton == null) ? "false" : showSearchButton;
 
-	String isEmployeesEmpty = (String)request.getParameter("isEmployeesEmpty");
-	String isProductsEmpty = (String)request.getParameter("isProductsEmpty");
+	String isEmployeesEmpty = request.getParameter("isEmployeesEmpty");
+	String isProductsEmpty = request.getParameter("isProductsEmpty");
 	
 	if (isEmployeesEmpty == null || isProductsEmpty == null) {
 		List<Employee> employees = new ArrayList<>();
@@ -111,7 +114,7 @@
 					</a>
 					<ul class="dropdown-menu dropdown-menu-dark">
 						<li>
-							<a class="dropdown-item" href="<%= request.getContextPath() %>/products/add">
+							<a class="dropdown-item" href="<%= request.getContextPath() %>/products/add.jsp">
 								Añadir un producto
 							</a>
 						</li>
@@ -119,7 +122,7 @@
 							if (isProductsEmpty.equalsIgnoreCase("false")) {
 						%>
 							<li>
-								<a class="dropdown-item" href="<%= request.getContextPath() %>/products/delete">
+								<a class="dropdown-item" href="<%= request.getContextPath() %>/products/delete.jsp">
 									Eliminar un producto
 								</a>
 							</li>
@@ -156,8 +159,8 @@
 			<%
 				if (showSearchButton.equalsIgnoreCase("true")) {
 			%>
-					<form class="d-flex" role="search" method="get" action="<%= request.getContextPath() %>/employees/searchByLastName">
-						<input class="form-control me-2" type="search" name="lastName" value="<%= searchValue %>" placeholder="Ingrese el apellido...">
+					<form class="d-flex" role="search" method="get" action="<%= request.getContextPath() + searchAction%>">
+						<input class="form-control me-2" type="search" name="<%= searchName %>" value="<%= searchValue %>" placeholder="<%= searchPlaceholder %>">
 						<button class="btn btn-outline-light d-flex align-items-center justify-content-center" type="submit">
 							<svg class="bi bi-search" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
 								<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
