@@ -22,7 +22,9 @@ public class Add extends HttpServlet {
 		Float price = Float.parseFloat(req.getParameter("price"));
 		int stock = Integer.parseInt(req.getParameter("stock"));
 		String entryDate = req.getParameter("entryDate");
+
 		String expireDate = req.getParameter("expireDate");
+		expireDate = (expireDate.equalsIgnoreCase("")) ? null : expireDate;
 
 		try {
 			var productDAOImpl = new ProductDAOImpl();
