@@ -53,7 +53,7 @@
 					</div>
 					<div class="col-md-4 mt-3">
 						<label for="validationCustom03" class="form-label">Teléfono</label>
-						<input id="validationCustom03" class="form-control" type="number" name="telephone" placeholder="Ingrese el telefono..." required />
+						<input id="validationCustom03" class="form-control" type="tel" name="telephone" placeholder="Ingrese el telefono..." required />
 						<div class="invalid-feedback">Ingrese un teléfono.</div>
 					</div>
 					<div class="row row-cols-3 mt-3 p-0 justify-content-between">
@@ -72,19 +72,19 @@
 							</select>
 							<div class="invalid-feedback">Seleccione un puesto válido.</div>
 						</div>
-					<div class="col-md-4">
-						<label class="form-label" for="validationCustom05">Salario</label>
-						<div class="input-group mb-3">
-							<span class="input-group-text">$</span>
-							<input id="validationCustom05" class="form-control" type="number" name="salary" placeholder="Ingrese el salario..." required />
-							<div class="invalid-feedback">Ingrese un salario.</div>
+						<div class="col-md-4">
+							<label class="form-label" for="validationCustom05">Salario</label>
+							<div class="input-group mb-3">
+								<span class="input-group-text">$</span>
+								<input id="validationCustom05" class="form-control rounded-end" type="number" step="0.01" min="0" name="salary" placeholder="Ingrese el salario..." required />
+								<div class="invalid-feedback">Ingrese un salario.</div>
+							</div>
 						</div>
-					</div>
-					<div class="col-md-4">
-						<label class="form-label" for="validationCustom04">Fecha de Inicio</label>
-						<input id="validationCustom04" class="form-control" type="date" name="startDate" required />
-						<div class="invalid-feedback">Ingrese una fecha.</div>
-					</div>
+						<div class="col-md-4">
+							<label class="form-label" for="validationCustom06">Fecha de Inicio</label>
+							<input id="validationCustom06" class="form-control actualDate" type="date" name="startDate" required />
+							<div class="invalid-feedback">Ingrese una fecha.</div>
+						</div>
 					</div>
 					<div class="row row-cols-3 mt-3 justify-content-center">
 						<button class="btn btn-success mx-4 w-50 d-flex align-items-center justify-content-center gap-1" type="submit">
@@ -113,4 +113,5 @@
 	></script>
 	
 	<script src="../JS/validateForm.js" type="text/javascript"></script>
+	<script src="../JS/actualDate.js" type="text/javascript"></script>
 </html>

@@ -46,9 +46,12 @@
 	<body class="min-vh-100 d-flex flex-column bg-secondary bg-opacity-50">
 		<!-- ------------------------- Menú de Navegación -------------------------- -->
 		<jsp:include page="../components/navbar.jsp">
-			<jsp:param name="activeDropdown" value="employeeManagement" />
+			<jsp:param name="activeOption" value="employeesManagement" />
 			<jsp:param name="showSearchButton" value="true" />
+			<jsp:param name="searchAction" value="/employees/searchByLastName" />
 			<jsp:param name="searchValue" value="<%= searchValue %>" />
+			<jsp:param name="searchName" value="lastName" />
+			<jsp:param name="searchPlaceholder" value="Ingrese el apellido..." />
 		</jsp:include>
 
 		<nav class="mx-2 mt-4">
@@ -111,7 +114,7 @@
 									};
 							%>
 									<tr>
-										<th scope="row"><%= ID %></th>
+										<th class="table-primary align-middle text-center" scope="row"><%= ID %></th>
 										<td><%= firstName %></td>
 										<td><%= lastName %></td>
 										<td><%= telephone %></td>

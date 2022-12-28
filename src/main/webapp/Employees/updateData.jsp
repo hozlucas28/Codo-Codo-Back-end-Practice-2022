@@ -55,58 +55,66 @@
 		<!-- ------------------------- Contenido Principal ------------------------- -->
 		<main class="mb-4">
 			<div class="container mx-auto my-5">
-				<form class="row needs-validation" action="<%= request.getContextPath() %>/employees/update?ID=<%= ID %>" method="post" novalidate>
-					<div class="col-md-4">
+				<form class="row align-items-center justify-content-center needs-validation" method="post" action="/supermarket/employees/update?ID=<%= ID %>" novalidate>
+					<div class="col-md-4 mt-3">
 						<label class="form-label" for="validationCustom01">Nombre</label>
-						<input id="validationCustom01" class="form-control" type="text" name="firstName" value="<%= firstName %>" placeholder="Ingrese el nombre..." required />
+						<input id="validationCustom01" class="form-control" type="text" name="firstName" value="<%= firstName %>" placeholder="Ingrese el nombre..." required>
 						<div class="invalid-feedback">Ingrese un nombre.</div>
 					</div>
-					<div class="col-md-4">
-						<label class="form-label" for="validationCustom02">Apellido</label>
-						<input id="validationCustom02" class="form-control" type="text" name="lastName" value="<%= lastName %>" placeholder="Ingrese el apellido..." required />
+					<div class="col-md-4 mt-3">
+						<label for="validationCustom02" class="form-label">Apellido</label>
+						<input id="validationCustom02" class="form-control" type="text" name="lastName" value="<%= lastName %>" placeholder="Ingrese el apellido..." required>
 						<div class="invalid-feedback">Ingrese un apellido.</div>
 					</div>
-					<div class="col-md-4">
-						<label class="form-label" for="validationCustom03">Teléfono</label>
-						<input id="validationCustom03" class="form-control" type="number" name="telephone" value="<%= telephone %>" placeholder="Ingrese el telefono..." required />
+					<div class="col-md-4 mt-3">
+						<label for="validationCustom03" class="form-label">Teléfono</label>
+						<input id="validationCustom03" class="form-control" type="tel" name="telephone" value="<%= telephone %>" placeholder="Ingrese el telefono..." required>
 						<div class="invalid-feedback">Ingrese un teléfono.</div>
 					</div>
-					<div class="col-md-3">
-						<label class="form-label" for="validationCustom04">Puesto de Trabajo</label>
-						<select id="validationCustom04" class="form-select" name="workstation" required>
-							<option selected disabled>Selecciona...</option>
-							<option value="Cajero/a" <% if (workstation.equalsIgnoreCase("Cajero/a")) { %> selected <% }; %>>Cajero/a</option>
-							<option value="Gerente/a" <% if (workstation.equalsIgnoreCase("Gerente/a")) { %> selected <% }; %>>Gerente/a</option>
-							<option value="Reponedor/a" <% if (workstation.equalsIgnoreCase("Reponedor/a")) { %> selected <% }; %>>Reponedor/a</option>
-							<option value="Empleado/a de ventas" <% if (workstation.equalsIgnoreCase("Empleado/a de ventas")) { %> selected <% }; %>>Empleado/a de ventas</option>
-							<option value="Empleado/a de limpieza" <% if (workstation.equalsIgnoreCase("Empleado/a de limpieza")) { %> selected <% }; %>>Empleado/a de limpieza</option>
-							<option value="Empleado/a de envasado" <% if (workstation.equalsIgnoreCase("Empleado/a de envasado")) { %> selected <% }; %>>Empleado/a de envasado</option>
-							<option value="Empleado/a de inventario" <% if (workstation.equalsIgnoreCase("Empleado/a de inventario")) { %> selected <% }; %>>Empleado/a de inventario</option>
-							<option value="Otro" <% if (workstation.equalsIgnoreCase("Otro")) { %> selected <% }; %>>Otro</option>
-						</select>
-						<div class="invalid-feedback">Selecciona un puesto válido.</div>
-					</div>
-					<div class="col-md-3">
-						<label class="form-label" for="validationCustom05">Salario</label>
-						<div class="input-group mb-3">
-							<span class="input-group-text">$</span>
-							<input id="validationCustom05" class="form-control" type="number" name="salary" value="<%= salary %>" placeholder="Ingrese el salario..." required>
-							<div class="invalid-feedback">Ingrese un salario.</div>
+					<div class="row row-cols-3 mt-3 p-0 justify-content-center">
+						<div class="col-md-4">
+							<label class="form-label" for="validationCustom04">Puesto de Trabajo</label>
+							<select id="validationCustom04" class="form-select" name="workstation" value="<%= workstation %>" required>
+								<option selected="" disabled="" value="">Selecciona...</option>
+								<option value="Cajero/a" <% if (workstation.equalsIgnoreCase("Cajero/a")) { %> selected <% }; %>>Cajero/a</option>
+								<option value="Gerente/a" <% if (workstation.equalsIgnoreCase("Gerente/a")) { %> selected <% }; %>>Gerente/a</option>
+								<option value="Reponedor/a" <% if (workstation.equalsIgnoreCase("Reponedor/a")) { %> selected <% }; %>>Reponedor/a</option>
+								<option value="Empleado/a de ventas" <% if (workstation.equalsIgnoreCase("Empleado/a de ventas")) { %> selected <% }; %>>Empleado/a de ventas</option>
+								<option value="Empleado/a de limpieza" <% if (workstation.equalsIgnoreCase("Empleado/a de limpieza")) { %> selected <% }; %>>Empleado/a de limpieza</option>
+								<option value="Empleado/a de envasado" <% if (workstation.equalsIgnoreCase("Empleado/a de envasado")) { %> selected <% }; %>>Empleado/a de envasado</option>
+								<option value="Empleado/a de inventario" <% if (workstation.equalsIgnoreCase("Empleado/a de inventario")) { %> selected <% }; %>>Empleado/a de inventario</option>
+								<option value="Otro">Otro</option>
+							</select>
+							<div class="invalid-feedback">Seleccione un puesto válido.</div>
+						</div>
+						<div class="col-md-4">
+							<label class="form-label" for="validationCustom05">Salario</label>
+							<div class="input-group mb-3">
+								<span class="input-group-text">$</span>
+								<input id="validationCustom05" class="form-control rounded-end" type="number" step="0.01" min="0" name="salary" value="<%= salary %>" placeholder="Ingrese el salario..." required>
+								<div class="invalid-feedback">Ingrese un salario.</div>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<label class="form-label" for="validationCustom06">Fecha de Inicio</label>
+							<input id="validationCustom06" class="form-control actualDate" type="date" name="startDate" value="<%= startDate %>" required>
+							<div class="invalid-feedback">Ingrese una fecha.</div>
+						</div>
+						<div class="col-md-2">
+							<label class="form-label" for="validationCustom07">Fecha de Finalización</label>
+							<input id="validationCustom07" class="form-control" type="date" name="endDate" value="<%= endDate %>">
+							<div class="invalid-feedback">Ingrese una fecha.</div>
 						</div>
 					</div>
-					<div class="col-md-3">
-						<label class="form-label" for="validationCustom06">Fecha de Inicio</label>
-						<input id="validationCustom046" class="form-control" type="date" name="startDate" value="<%= startDate %>" required />
-						<div class="invalid-feedback">Ingrese una fecha.</div>
+					<div class="row row-cols-3 mt-3 justify-content-center">
+						<button class="btn btn-info mx-4 w-50 d-flex align-items-center justify-content-center gap-1" type="submit">
+							<svg class="bi bi-pen" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+  								<path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+							</svg>
+							<span>Actualizar Datos</span>
+						</button>
 					</div>
-					<div class="col-md-3">
-						<label class="form-label" for="validationCustom07">Fecha de Finalización</label>
-						<input id="validationCustom07" class="form-control" type="date" name="endDate" value="<%= endDate %>" />
-					</div>
-					<div class="row">
-						<button class="btn btn-info mx-4" type="submit">Actualizar Datos</button>
-					</div>
-					<p class="mt-3 text-muted text-center">
+					<p class="mt-2 text-muted text-center">
 						Note que al ingresar una fecha de finalización dicho empleado sera considerado como 'inactivo'.
 					</p>
 				</form>
