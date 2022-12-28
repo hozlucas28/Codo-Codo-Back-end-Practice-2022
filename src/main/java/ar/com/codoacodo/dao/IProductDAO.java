@@ -7,11 +7,15 @@ import java.util.List;
 public interface IProductDAO {
 	public void add(Product product) throws SQLException; // Añade un nuevo producto.
 
-	public void delete(int id) throws SQLException; // Elimina un producto.
+	public boolean delete(int ID) throws SQLException; // Elimina un producto.
+
+	public void deleteAll() throws SQLException; // Elimina todos los productos.
 
 	public void update(Product product) throws SQLException; // Actualiza los datos de un producto.
 
-	public Product getByID(int id) throws SQLException; // Devuelve el producto que coindice con la ID.
+	public Product getByID(int ID) throws SQLException; // Devuelve el producto que coindice con la ID.
 
-	public List<Product> getAll() throws SQLException; // Devuelve un listado con todos los productos.
+	public List<Product> getAllByBrand(String brand) throws SQLException; // Devuelve todos los productos que coindicen con la marca.
+
+	public List<Product> getAll() throws SQLException; // Devuelve todos los productos.
 }
