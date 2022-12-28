@@ -104,5 +104,6 @@
 	></script>
 	
 	<script src="../JS/validateForm.js" type="text/javascript"></script>
+	<script src="../JS/tooltip.js" type="text/javascript"></script>
 	<script src="../JS/actualDate.js" type="text/javascript"></script>
 </html>
