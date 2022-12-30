@@ -7,12 +7,12 @@
 </h4>
 
 <p align="center">
-    <a href="#summary">Summary</a> •
-    <a href="#installation">Installation</a> •
-    <a href="#related">Related</a> •
-    <a href="#license">License</a> •
-    <a href="#acknowledgments">Acknowledgments</a> •
-    <a href="#contact">Contact</a>
+    <a href="#----summary">Summary</a> •
+    <a href="#----installation">Installation</a> •
+    <a href="#----related">Related</a> •
+    <a href="#----license">License</a> •
+    <a href="#----acknowledgments">Acknowledgments</a> •
+    <a href="#----contact">Contact</a>
 </p>
 
 <p align="center">
