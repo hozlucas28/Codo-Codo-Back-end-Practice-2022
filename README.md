@@ -34,12 +34,6 @@
     The web application is about an admin panel of a supermarket. In this panel you can manage your employees and products, throw several options in the navbar.
 </p>
 
-<p>
-    <strong>• Images of responsive design:</strong>
-</p>
-
-<img src="https://user-images.githubusercontent.com/88015479/210018473-2169b295-32b7-4586-9a5e-87b1cd73fe1f.png">
-
 <h2>
     Key Features
 </h2>
@@ -81,6 +75,12 @@
             Responsive Design By <a href="https://getbootstrap.com/" target="_blank">Bootstrap v5.3.0</a>
         </li>
     </ul>
+</p>
+
+<img src="https://user-images.githubusercontent.com/88015479/210018473-2169b295-32b7-4586-9a5e-87b1cd73fe1f.png">
+
+<p align="center">
+    <strong>(images of responsive design)</strong>
 </p>
 
 <h2>
