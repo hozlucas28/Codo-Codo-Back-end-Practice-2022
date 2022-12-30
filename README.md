@@ -69,10 +69,10 @@
             Delete all Employees/Products
         </li>
         <li>
-            Search Employee By Last Name
+            Search Employees By Last Name
         </li>
         <li>
-            Search Product By Brand
+            Search Products By Brand
         </li>
         <li>
             Dynamic Notifications System
