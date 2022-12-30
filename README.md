@@ -31,7 +31,7 @@
 </h2>
 <p>
     This is a practice about Back-end side of a web application, made with several technologies like you can see in languages, side bar of the GitHub repository page.
-    The web application is about an admin panel of a supermarket. In this panel you can manage your employees and products, throw several options in the navbar.
+    The web application is about an admin panel of a supermarket. In this panel you can manage your employees and products, throw several options in the navbar. In addition, I used npm packages like: <a href="https://prettier.io/" target="_blank">prettier</a> and <a href="https://github.com/typicode/husky" target="_blank">husky</a> to made my code be more 'prettier'.
 </p>
 
 <h2>
@@ -88,6 +88,13 @@
 </h2>
 <p>
     Clone the repository and use <a href="https://www.eclipse.org/" target="_blank">Eclipse IDE</a> with <a href="https://tomcat.apache.org/" target="_blank">Apache Tomcat v9</a>. Then you have to install <a href="https://www.mysql.com/" target="_blank">mySQL</a>, because this application interact with a database, call 'Supermarket', to store list of employees and products. After that, start apache server of the web application and go to <a href="http://localhost:8080/supermarket/" target="_blank">http://localhost:8080/supermarket/</a>, where you are going to see the preview of this application.
+</p>
+
+<p>
+    <i>
+        <strong>• Optional:</strong>
+        Run command <code>npm install</code> to install all packages used for make a clean code, like Prettier and Husky for pre-commits.
+    </i>
 </p>
 
 <h2>
