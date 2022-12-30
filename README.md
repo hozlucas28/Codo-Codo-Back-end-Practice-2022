@@ -24,7 +24,7 @@
 
 <h2>Installation</h2>
 <p>
-    Clone the repository and use <a href="https://www.eclipse.org/">Eclipse IDE</a> with <a href="https://tomcat.apache.org/">Apache Tomcat v9</a>. Then you have to install mySQL, because this application interact with a database, call Supermarket, to store list of employees and products. After that, start apache server of the web application and go to <a href="http://localhost:8080/supermarket/">http://localhost:8080/supermarket/</a>, where you are going to see the preview of this application.
+    Clone the repository and use <a href="https://www.eclipse.org/">Eclipse IDE</a> with <a href="https://tomcat.apache.org/">Apache Tomcat v9</a>. Then you have to install <a href="https://www.mysql.com/">mySQL</a>, because this application interact with a database, call 'Supermarket', to store list of employees and products. After that, start apache server of the web application and go to <a href="http://localhost:8080/supermarket/">http://localhost:8080/supermarket/</a>, where you are going to see the preview of this application.
 </p>
 
 <h2>License</h2>
