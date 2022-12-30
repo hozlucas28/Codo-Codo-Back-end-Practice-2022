@@ -1,35 +1,48 @@
-# <center>Codo Codo - Back-end Practice [2022]</center>
+<h1 align="center">Codo Codo - Back-end Practice [2022]</h1>
+<p align="center">
+    <a href="https://www.youtube.com/watch?v=_ViGehlwlig&ab_channel=hozlucas28" target="_blank">
+        <img src="https://user-images.githubusercontent.com/88015479/210026146-699917c4-d40d-4f07-a49f-d5ade0daa6d2.png" width="640">
+    </a>
+</p>
+<p align="center">
+    <strong>(click on image to see a video preview)</strong>
+</p>
 
-<center>
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_ViGehlwlig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center>
 
-## Summary
+<h2>Summary</h2>
+<p>
+    This is a practice about Back-end side of a web application, made with several technologies like you can see in languages, side bar of the GitHub repository page.
+    The web application is about an admin panel of a supermarket. In this panel you can manage your employees and products, throw several options in the navbar.
+</p>
 
-This is a practice about Back-end side of a web application, made with several technologies like you can see in languages, side bar of the GitHub repository page.
-The web application is about an admin panel of a supermarket. In this panel you can manage your employees and products, throw several options in the navbar.
+<p>
+    <strong>• Images of responsive design:</strong>
+</p>
+<img src="https://user-images.githubusercontent.com/88015479/210018473-2169b295-32b7-4586-9a5e-87b1cd73fe1f.png">
+<p align="center">
+    <a href="https://github.com/hozlucas28/Codo-Codo-Back-end-2022" target="_blank">→  REPOSITORY OF THE COURSE  ←</a>
+</p>
 
-**• Images of the responsive design:**
 
-  <img src="https://github.com/hozlucas28/Codo-Codo-Back-end-Practice-2022/blob/Master/docs/Home%20-%20Mobile.png?raw=true" width="225"/>
-  <img src="https://github.com/hozlucas28/Codo-Codo-Back-end-Practice-2022/blob/Master/docs/Add%20employee%20-%20Mobile.png?raw=true" width="225"/>
-  <img src="https://github.com/hozlucas28/Codo-Codo-Back-end-Practice-2022/blob/Master/docs/Delete%20employee%20-%20Mobile.png?raw=true" width="225"/>
-  <img src="https://github.com/hozlucas28/Codo-Codo-Back-end-Practice-2022/blob/Master/docs/Show%20employees%20-%20Mobile.png?raw=true" width="225"/>
+<h2>Installation</h2>
+<p>
+    Clone the repository and use <a href="https://www.eclipse.org/">Eclipse IDE</a> with <a href="https://tomcat.apache.org/">Apache Tomcat v9</a>. Then you have to install mySQL, because this application interact with a database, call Supermarket, to store list of employees and products. After that, start apache server of the web application and go to <a href="http://localhost:8080/supermarket/">http://localhost:8080/supermarket/</a>, where you are going to see the preview of this application.
+</p>
 
-[<center>→ REPOSITORY USED FOR THE COURSE ←</center>](https://github.com/hozlucas28/Codo-Codo-Back-end-2022)
 
-## Installation
+<h2>License</h2>
+<p>
+    This repository is under <a href="./LICENSE">MIT License</a>, if you want to see what you are allowed to do with the content of this repository, please visit <a href="https://choosealicense.com/licenses/">choosealicense</a> for more information.
+</p>
 
-Clone the repository and use [Eclipse IDE](https://www.eclipse.org/) with [Apache Tomcat v9](https://tomcat.apache.org/). Then you have to install mySQL, because this application interact with a database, call Supermarket, to store list of employees and products. After that, start apache server of the web application and go to [http://localhost:8080/supermarket/](http://localhost:8080/supermarket/), where you are going to see the preview of this application.
 
-## License
+<h2>Acknowledgments</h2>
+<p>
+    Thanks to <a href="https://www.buenosaires.gob.ar/educacion/codo-codo">Codo a Codo</a> teachers to teach me how to program in Java and others technologies in a productive way.
+</p>
 
-This repository is under [MIT License](./LICENSE), if you want to see what you are allowed to do with the content of this repository, please visit [choosealicense](https://choosealicense.com/licenses/) for more information.
 
-## Acknowledgments
-
-Thanks to [Codo a Codo](https://www.buenosaires.gob.ar/educacion/codo-codo) teachers to teach me how to program in Java and others technologies in a productive way.
-
-## Contact
-
-If you want to contact me, please see my [socials medias](https://github.com/hozlucas28) in my GitHub profile.
+<h2>Contact</h1>
+<p>
+    If you want to contact me, please see my <a href="https://github.com/hozlucas28">socials medias</a> in my GitHub profile.
+</p>
