@@ -31,7 +31,7 @@
 </h2>
 <p>
     This is a practice about Back-end side of a web application, made with several technologies like you can see in languages, side bar of the GitHub repository page.
-    The web application is about an admin panel of a supermarket. In this panel you can manage your employees and products, throw several options in the navbar. In addition, I used npm packages like: <a href="https://prettier.io/" target="_blank">Prettier</a> and <a href="https://github.com/typicode/husky" target="_blank">Husky</a> to made my code be more 'prettier'.
+    The web application is about an admin panel of a supermarket. In this panel you can manage your employees and products, throw several options in the navbar. In addition, I used npm packages like: <a href="https://prettier.io/" target="_blank">Prettier</a> and <a href="https://github.com/typicode/husky" target="_blank">Husky</a> to make my code be more 'prettier'.
 </p>
 
 <h2>
