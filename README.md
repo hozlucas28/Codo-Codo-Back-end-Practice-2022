@@ -1,9 +1,9 @@
 <h1 align="center">
-    Codo a Codo - Back-end Practice [2022]
+    Codo a Codo - Back-end Project [2022]
 </h1>
 
 <h4 align="center">
-    Repository of <a href="https://www.buenosaires.gob.ar/educacion/codo-codo" target="_blank">Codo a Codo - Full Stack Java<a> Back-end practice.
+    Repository of <a href="https://www.buenosaires.gob.ar/educacion/codo-codo" target="_blank">Codo a Codo - Full Stack Java<a> Back-end project.
 </h4>
 
 <p align="center">
@@ -30,7 +30,7 @@
     Summary
 </h2>
 <p>
-    This is a practice about Back-end side of a web application, made with several technologies like you can see in languages, side bar of the GitHub repository page.
+    This is a project about Back-end side of a web application, made with several technologies like you can see in languages, side bar of the GitHub repository page.
     The web application is about an admin panel of a supermarket. In this panel you can manage your employees and products, throw several options in the navbar. In addition, I used npm packages like: <a href="https://prettier.io/" target="_blank">Prettier</a> and <a href="https://github.com/typicode/husky" target="_blank">Husky</a> to make my code be more 'prettier'.
 </p>
 
@@ -109,7 +109,7 @@
             <a href="https://github.com/hozlucas28/Codo-Codo-Back-end-2022" target="_blank">Repository of Back-end course</a>
         </li>
         <li>
-            <a href="https://github.com/hozlucas28/Codo-Codo-Front-end-Practice-2022" target="_blank">Repository of Front-end practice</a>
+            <a href="https://github.com/hozlucas28/Codo-Codo-Front-end-Project-2022" target="_blank">Repository of Front-end project</a>
         </li>
     </ul>
 </p>
