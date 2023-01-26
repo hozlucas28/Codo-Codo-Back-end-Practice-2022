@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-    Repository of <a href="https://www.buenosaires.gob.ar/educacion/codo-codo" target="_blank">Codo a Codo - Full Stack Java<a> Back-end project.
+    Repository of <a href="https://inscripcionesagencia.bue.edu.ar/codoacodo" target="_blank">Codo a Codo - Full Stack Java<a> Back-end project.
 </h4>
 
 <p align="center">
@@ -125,7 +125,7 @@
     Acknowledgments
 </h2>
 <p>
-    Thanks to <a href="https://www.buenosaires.gob.ar/educacion/codo-codo" target="_blank">Codo a Codo</a> teachers to teach me how to program in Java and others technologies in a productive way.
+    Thanks to <a href="https://inscripcionesagencia.bue.edu.ar/codoacodo" target="_blank">Codo a Codo</a> teachers to teach me how to program in Java and others technologies in a productive way.
 </p>
 
 <h2>
