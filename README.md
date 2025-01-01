@@ -18,7 +18,7 @@
 
 <p align="center">
     <a href="https://www.youtube.com/watch?v=_ViGehlwlig&ab_channel=hozlucas28" target="_blank">
-        <img src="./.github/preview.png" width="800">
+        <img src="./.github/app-preview.png" width="800">
     </a>
 </p>
 
